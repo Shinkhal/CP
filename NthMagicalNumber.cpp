@@ -7,7 +7,6 @@ int nthMagical(int n,int a,int b){
     long long low= min(a,b),high= (long long)n* min(a,b);
     while(low<=high){
         long long mid = low +(high -low)/2;
-        
     }
 
 

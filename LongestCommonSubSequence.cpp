@@ -12,18 +12,18 @@ int longestPalindromeSubseq(const string& s) {
         dp[i][i] = 1;
     }
 
-    for (int length = 2; length <= n; ++length) { // length of the substring
+    for (int length = 2; length <= n; ++length) {
         for (int i = 0; i <= n - length; ++i) {
-            int j = i + length - 1; // end index of the substring
+            int j = i + length - 1; 
             if (s[i] == s[j]) {
-                dp[i][j] = dp[i + 1][j - 1] + 2; // characters match
+                dp[i][j] = dp[i + 1][j - 1] + 2; 
             } else {
-                dp[i][j] = max(dp[i + 1][j], dp[i][j - 1]); // characters do not match
+                dp[i][j] = max(dp[i + 1][j], dp[i][j - 1]); 
             }
         }
     }
 
-    return dp[0][n - 1]; // The result is in the top right corner of the DP table
+    return dp[0][n - 1];
 }
 
 int main() {

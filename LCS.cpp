@@ -7,7 +7,6 @@ using namespace std;
 #define maxv INT_MAX
 #define minv INT_MIN
 
-
 // recurssion method;
 int lcs(string& s1, string& s2,int m,int n){
 	if(n==0 || m==0)return 0;
@@ -49,7 +48,7 @@ int main() {
     int ans = lcs(s1,s2,s1.size(),s2.size());
     cout<<ans<<endl;
 
-    int ans2 = lcs(s1,s2);
-    cout<<ans2<<endl;
+    cout<<lcs(s1,s2)<<endl;
+    
     return 0;
 }

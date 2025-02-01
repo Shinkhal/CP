@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 #define ll long long
 #define mod 100000000007
 #define gcd(a,b) __gcd(a,b)
@@ -9,9 +8,7 @@ using namespace std;
 
 int countPalindromicSubsequences(string s){
 	int n = s.size();
-
 	vector<vector<int>>dp(n,vector<int>(n,0));
-
 	for(int i=0;i<n;i++){
 		dp[i][i]=1;
 	}

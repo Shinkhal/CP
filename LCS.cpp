@@ -18,6 +18,7 @@ int lcs(string& s1, string& s2,int m,int n){
 
 }
 
+
 //dp method
 int lcs(string& s1,string& s2){
 	int m = s1.size();

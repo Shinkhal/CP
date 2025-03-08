@@ -6,14 +6,22 @@ using namespace std;
 #define gcd(a,b) __gcd(a,b)
 #define maxv INT_MAX
 #define minv INT_MIN
-void rotate(vector<int>& arr, int k){
-	int n= arr.size();
-	k = k%n;
 
-	reverse(arr.begin(), arr.end());
-	reverse(arr.begin(), arr.begin()+k);
-	reverse(arr.begin()+k, arr.end());
 
+// void rotate(vector<int>& arr, int k){
+// 	int n= arr.size();
+// 	k = k%n;
+
+// 	reverse(arr.begin(), arr.end());
+// 	reverse(arr.begin(), arr.begin()+k);
+// 	reverse(arr.begin()+k, arr.end());
+
+// }
+
+void rotateArray(vector<int>& arr,int k){
+    k = k%arr.size();
+
+    rotate(arr.begin(),arr.end()-k,arr.end());
 }
 int main() {
     ios::sync_with_stdio(0);
@@ -31,7 +39,7 @@ int main() {
     int k;
     cin>>k;
 
-    rotate(arr,k);
+    rotateArray(arr,k);
 
     for (int num : arr) cout << num << " ";
     cout<<endl;
